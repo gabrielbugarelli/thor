@@ -1,0 +1,29 @@
+.grid-container{
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 1fr 8fr;
+  grid-template-columns: 1fr 1fr  1fr 5fr 1fr ;
+  grid-template-areas: 
+  "header header header header header"
+  "painel board board board painel-2"
+  ;
+}
+
+.header{
+  grid-area: header;
+  background-color: red;
+}
+.painel{
+  grid-area: painel;
+  background-color: green;
+}
+
+.board {
+  grid-area: board;
+  background-color: aqua;
+}
+
+.painel-2{
+  grid-area: painel-2;
+  background-color: yellow;
+}
