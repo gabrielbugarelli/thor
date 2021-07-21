@@ -11,11 +11,13 @@
 
 .header{
   grid-area: header;
-  background-color: red;
+  background-color: #005494;
 }
 .painel{
   grid-area: painel;
-  background-color: green;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
 }
 
 .board {

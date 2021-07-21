@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function index() {
+export default function index({children}) {
   return (
-    <div>
-      Painel
-    </div>
+    <>
+      {children}
+    </>
   )
 }
