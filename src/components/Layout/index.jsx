@@ -1,11 +1,15 @@
+import Header from "../Header";
+import './style.css';
 
-
-const index = ({children, classe}) => {
+const Layout = ({children}) => {
   return (
-    <div className={classe}>
-      {children}
+    <div className='container'>
+      <Header className='header' name="Thor"/>
+      <div className='children'>
+        {children}
+      </div>
     </div>
-  );
+  )
 }
 
-export default index;
+export default Layout;

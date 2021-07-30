@@ -1,0 +1,21 @@
+.container{
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 6vh 8fr;
+  gap: 1vw;
+
+  grid-template-areas: 
+    "header"
+    "children"
+  ;
+  
+}
+.header{
+  grid-area: header;
+  /* background-color: blue; */
+}
+
+.children{
+  grid-area: children;
+}

@@ -2,9 +2,9 @@ import React from 'react';
 
 const Header = ({ name }) => {
   return (
-    <>
-      <span>{name}</span>
-    </>
+    <header style={{ backgroundColor: 'red' }}>
+      {name}
+    </header >
   );
 }
 
