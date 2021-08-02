@@ -1,11 +1,47 @@
-import React from 'react';
+// react and css
+import React, {useState} from 'react';
+import './style.css'
 
-const Board = () => {
+// components
+
+const Board = ({linha, coluna}) => {
+    const valor = parseInt(linha)
+    var teste = []
+    for (let i = 0; i < valor; i++) {
+      teste.push(i)
+    }
+    console.log(teste);
+
   return (
     <div>
-      <h1>Board</h1>
+      <div className='context'>
+        {teste.map((item,key)=>{
+          {console.log('percorreu')}
+          return(
+            <Testando key={key} />
+          )
+        })}
+
+        {/* {
+          teste.forEach(element => {
+            <Testando />
+          })
+        } */}
+      </div>
     </div>
   );
 }
+
+
+const Testando = () => {
+  return (
+    <div className='linha'>
+      testando
+    </div>
+  );
+}
+
+
+
 
 export default Board;

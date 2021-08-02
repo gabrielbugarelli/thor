@@ -1,5 +1,5 @@
 .grid-container{
-  min-height: 100vh;
+  min-height: 100%;
   display: grid;
   grid-template-columns: 1fr 4fr 1.3fr;
   gap: 1vw;
@@ -12,9 +12,11 @@
   grid-area: board;
   background-color: blue;
   border-radius:  15px  15px 0  0;
+  
 }
 
 .properties{
+  display: flex;
   grid-area: properties;
   background-color: brown;
   border-radius: 15px 0 0 0;
@@ -23,4 +25,5 @@
 .components{
   grid-area: components;
   background-color: white;
+  border-radius: 0 15px 0 0;
 }

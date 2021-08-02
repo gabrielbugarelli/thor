@@ -1,5 +1,6 @@
-//estilos do Home
+//react and css
 import './style.css'
+import {useState} from 'react'
 
 //components
 import Properties from '../../components/Properties/Index';
@@ -11,6 +12,9 @@ import Components from '../../components/Components';
 //seguindo conforme a documentação do beautiful-dnd
 
 const Home = () => {
+  const [linha, setLinha] = useState(0);
+  const [Coluna, setColuna] = useState(0);
+
   return (
     <>
       <Layout >
@@ -21,16 +25,16 @@ const Home = () => {
           </div>
 
           <div className="board">
-            <Board />
+            <Board coluna={Coluna} linha={linha}/>
           </div>
 
           <div className="properties">
-            <Properties />
+            <Properties  linha={linha} setLinha={setLinha} coluna={Coluna} setColuna={setColuna}/>
           </div>
 
         </div>
       </Layout>
-    </>
+    </>  
   );
 }
 

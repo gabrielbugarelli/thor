@@ -1,8 +1,10 @@
 .container{
   min-height: 100vh;
+  max-height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 6vh 8fr;
+  overflow: hidden;
   gap: 1vw;
 
   grid-template-areas: 
