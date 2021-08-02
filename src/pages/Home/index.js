@@ -5,7 +5,7 @@ import './style.css'
 import Properties from '../../components/Properties/Index';
 import Board from '../../components/Board';
 import Layout from '../../components/Layout';
-// import Components from '../../omponents/Components';
+import Components from '../../components/Components';
 
 //a página Home deverá ser montado todo o esquema do Drag In Drop,
 //seguindo conforme a documentação do beautiful-dnd
@@ -16,6 +16,10 @@ const Home = () => {
       <Layout >
         <div className="grid-container">
 
+          <div className="components">
+            <Components />
+          </div>
+
           <div className="board">
             <Board />
           </div>
@@ -24,9 +28,6 @@ const Home = () => {
             <Properties />
           </div>
 
-          <div className="components">
-            {/* <Components /> */}
-          </div>
         </div>
       </Layout>
     </>
