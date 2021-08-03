@@ -1,18 +1,18 @@
 .grid-container{
-  min-height: 100%;
   display: grid;
   grid-template-columns: 1fr 4fr 1.3fr;
   gap: 1vw;
   grid-template-areas: 
     "components board properties"
   ;
+  height: 100%;
 }
 
 .board{
   grid-area: board;
   background-color: blue;
   border-radius:  15px  15px 0  0;
-  
+  /* flex: 1; */
 }
 
 .properties{

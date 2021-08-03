@@ -24,9 +24,9 @@ const Home = () => {
             <Components />
           </div>
 
-          <div className="board">
-            <Board coluna={Coluna} linha={linha}/>
-          </div>
+          {/* <div className="board"> */}
+            <Board className="board" coluna={Coluna} linha={linha}/>
+          {/* </div> */}
 
           <div className="properties">
             <Properties  linha={linha} setLinha={setLinha} coluna={Coluna} setColuna={setColuna}/>

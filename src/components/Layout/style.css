@@ -1,23 +1,21 @@
 .container{
-  min-height: 100vh;
-  max-height: 100vh;
   display: grid;
+  height: 100vh;
   grid-template-columns: 1fr;
-  grid-template-rows: 6vh 8fr;
+  grid-template-rows: 1fr 16fr;
   overflow: hidden;
   gap: 1vw;
-
   grid-template-areas: 
     "header"
     "children"
   ;
-  
 }
 .header{
   grid-area: header;
-  /* background-color: blue; */
+  background-color: green;
 }
 
 .children{
   grid-area: children;
+  background-color: red;
 }

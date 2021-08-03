@@ -4,9 +4,8 @@ import './style.css'
 
 const Components = () => {
   return (
-    <div className='container'>
-      <h1>components</h1>
-    </div>
+    <>
+    </>
   );
 }
 

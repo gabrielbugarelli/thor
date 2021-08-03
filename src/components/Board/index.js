@@ -13,8 +13,8 @@ const Board = ({linha, coluna}) => {
     console.log(teste);
 
   return (
-    <div>
-      <div className='context'>
+    <div className='context'>
+      
         {teste.map((item,key)=>{
           {console.log('percorreu')}
           return(
@@ -22,12 +22,7 @@ const Board = ({linha, coluna}) => {
           )
         })}
 
-        {/* {
-          teste.forEach(element => {
-            <Testando />
-          })
-        } */}
-      </div>
+      
     </div>
   );
 }
