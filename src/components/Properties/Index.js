@@ -14,9 +14,9 @@ const Properties = ({linha, setLinha, coluna, setColuna}) => {
     <div>
       <h1> Propriedades</h1>
       <h3>linha</h3>
-      <input type="text" value={linha} onChange={(e) => handleTeste(e)} />
+      <input type="number" value={parseInt(linha)} onChange={(e) => handleTeste(e)} />
       <h3>Coluna</h3>
-      <input type="text" onChange={(e)=> setColuna(e.target.value)} />
+      <input type="number" onChange={(e)=> setColuna(e.target.value)} />
     </div>
   );
 }

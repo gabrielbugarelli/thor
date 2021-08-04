@@ -3,38 +3,28 @@ import React, {useState} from 'react';
 import './style.css'
 
 // components
+import Linha from '../../components/Linha'
 
 const Board = ({linha, coluna}) => {
     const valor = parseInt(linha)
-    var teste = []
+    var linhas = []
     for (let i = 0; i < valor; i++) {
-      teste.push(i)
+      linhas.push(i)
     }
-    console.log(teste);
 
   return (
     <div className='context'>
-      
-        {teste.map((item,key)=>{
-          {console.log('percorreu')}
+        {linhas.map((item,key)=>{
           return(
-            <Testando key={key} />
+            <Linha key={key} />
           )
         })}
-
-      
     </div>
   );
 }
 
 
-const Testando = () => {
-  return (
-    <div className='linha'>
-      testando
-    </div>
-  );
-}
+
 
 
 
