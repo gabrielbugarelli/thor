@@ -1,6 +1,9 @@
-.linha{
+.coluna{
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 20px;
+  width: 20px;
+  background-color: red;
   border-bottom: 1px solid black;
 }
