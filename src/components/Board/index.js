@@ -19,7 +19,7 @@ const Board = () => {
   // colunas
   var colunas = []
   const numeroColunas = Api.board.style.gridtemplatecolumns
-  for (let i = 0; i < numeroColunas; i++) {
+  for (let i = 0; i < numeroColunas - 1; i++) {
     colunas.push(i)
   }
 

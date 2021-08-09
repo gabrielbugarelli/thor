@@ -15,6 +15,7 @@ const Properties = ({linha, setLinha, coluna, setColuna}) => {
       }else{
         alert('O maximo de linhas permitidas é 12')
         setLinha(12)
+        Api.board.style.gridtemplaterows = 12
       }
     }
   }
@@ -29,6 +30,7 @@ const Properties = ({linha, setLinha, coluna, setColuna}) => {
       }else{
         alert('O maximo de colunas é 6')
         setColuna(6)
+        Api.board.style.gridtemplatecolumns = 6
       }
     }
   }
