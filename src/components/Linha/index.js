@@ -3,7 +3,7 @@ import './style.css'
 
 const Linha = () => {
   return (
-      <div className='linha' ></div>
+    <div className='linha'></div>
   );
 }
 

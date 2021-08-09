@@ -1,5 +1,6 @@
 .linha{
   display: flex;
+  max-width: 100%;
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid black;

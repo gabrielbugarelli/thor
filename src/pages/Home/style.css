@@ -10,7 +10,6 @@
 
 .board{
   grid-area: board;
-  background-color: blue;
   border-radius:  15px  15px 0  0;
   /* flex: 1; */
 }

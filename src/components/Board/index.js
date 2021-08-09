@@ -11,31 +11,37 @@ import Api from '../../Api.json'
 const Board = () => {
   // linhas
   var linhas = []
-  const valor = Api.board.style.gridtemplaterows
-  for (let i = 0; i < valor; i++) {
+  const numeroLinhas = Api.board.style.gridtemplaterows
+  for (let i = 0; i < numeroLinhas; i++) {
     linhas.push(i)
   }
 
   // colunas
   var colunas = []
-  const valor2 = Api.board.style.gridtemplatecolumns
-  for (let i = 0; i < valor2; i++) {
+  const numeroColunas = Api.board.style.gridtemplatecolumns
+  for (let i = 0; i < numeroColunas; i++) {
     colunas.push(i)
   }
 
   return (
-    <div className='context'>
+    <>
+      {/* linhas */}
+      <div className='context-linha'>
         {linhas.map((item,key)=>{
           return(
-            <Linha key={key} />
+            <Linha className='linhas' key={key} />
           )
         })}
-        {colunas.map((item,key)=>{
-          return(
-            <Coluna key={key}/>
-          )
-        })}
-    </div>
+        {/* coluna  */}
+        <div className="context-coluna">
+          {colunas.map((item, key) => {
+            return (
+              <Coluna className='colunas' key={key} />
+            )
+          })}
+        </div>
+      </div>
+    </>
   );
 }
 export default Board;

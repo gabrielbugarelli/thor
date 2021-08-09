@@ -1,7 +1,15 @@
-.context{
+.container{
+  /* position: relative;
+  background-color: green;  */
+}
+
+.context-linha{
   background-color: violet;
   height: 100%;
   border-radius:  15px  15px 0  0;
-  display: grid;
-  grid-template-columns: 1fr;
+  display:grid;
+}
+.context-coluna{
+  background-color: transparent;
+  border-radius:  15px  15px 0  0;
 }

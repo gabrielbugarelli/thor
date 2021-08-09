@@ -1,9 +1,10 @@
 import React from 'react';
+import './style.css'
 
-const index = () => {
+const Coluna = () => {
   return (
     <div className='coluna'></div>
   );
 }
 
-export default index;
+export default Coluna;
