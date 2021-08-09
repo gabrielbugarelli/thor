@@ -24,7 +24,7 @@ const Board = () => {
   }
 
   return (
-    <>
+    <div className='container-board'>
       {/* linhas */}
       <div className='context-linha'>
         {linhas.map((item,key)=>{
@@ -32,16 +32,16 @@ const Board = () => {
             <Linha className='linhas' key={key} />
           )
         })}
-        {/* coluna  */}
-        <div className="context-coluna">
-          {colunas.map((item, key) => {
-            return (
-              <Coluna className='colunas' key={key} />
-            )
-          })}
-        </div>
       </div>
-    </>
+      {/* coluna  */}
+      <div className="context-coluna">
+        {colunas.map((item, key) => {
+          return (
+            <Coluna className='colunas' key={key} />
+          )
+        })}
+      </div>
+    </div>
   );
 }
 export default Board;
