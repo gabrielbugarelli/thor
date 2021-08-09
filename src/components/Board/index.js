@@ -9,19 +9,32 @@ import Coluna from '../../components/Coluna'
 import Api from '../../Api.json'
 
 const Board = () => {
-  // linhas
-  var linhas = []
-  const numeroLinhas = Api.board.style.gridtemplaterows
-  for (let i = 0; i < numeroLinhas; i++) {
-    linhas.push(i)
-  }
 
-  // colunas
+  // var linhas = []
+  // linhas
+  const [linhas, setlinhas] = useState([]);
+  useEffect(() => {
+    // setlinhas = []
+    console.log(linhas.length);
+    const numeroLinhas = Api.board.style.gridtemplaterows
+    for (let i = 0; i < numeroLinhas; i++) {
+      linhas.push(i)
+    }
+    console.log('reenderizou');
+    console.log(linhas.length);
+  }, [Api.board.style.gridtemplaterows]);
+
+
   var colunas = []
-  const numeroColunas = Api.board.style.gridtemplatecolumns
-  for (let i = 0; i < numeroColunas - 1; i++) {
-    colunas.push(i)
-  }
+  // colunas
+  useEffect(() => {
+    const numeroColunas = Api.board.style.gridtemplatecolumns
+    for (let i = 0; i < numeroColunas - 1; i++) {
+      colunas.push(i)
+    }
+  }, [Api.board.style.gridtemplatecolumns]);
+
+
 
   return (
     <div className='container-board'>
