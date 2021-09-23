@@ -13,14 +13,12 @@ import Api from '../../Api.json'
 
 //a página Home deverá ser montado todo o esquema do Drag In Drop,
 //seguindo conforme a documentação do beautiful-dnd
-
 const Home = () => {
   const [linha, setLinha] = useState(1);
   const [coluna, setColuna] = useState(1);
   
   return (
     <>
-      
       <Layout >
         <div className="grid-container">
 
