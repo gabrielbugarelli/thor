@@ -1,19 +1,19 @@
 // react and css
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./style.css";
 
 // components
 import Linha from "../../components/Linha";
 import Coluna from "../../components/Coluna";
+
 // json
 import Api from "../../Api.json";
 
 const Board = () => {
-  // ----LINHAS -----
-  
   const [linhas, setLinhas] = useState([]);
   const [coluna, setColuna] = useState([]);
 
+  // ----LINHAS -----
   useEffect(() => {
     let linhasAux = [];
     const numeroLinhas = Api.board.style.gridtemplaterows;
@@ -24,7 +24,6 @@ const Board = () => {
   }, [Api.board.style.gridtemplaterows]);
 
   // ----COLUNAS -----
-
   useEffect(() => {
     let colunaAux = []
     const numeroColunas = Api.board.style.gridtemplatecolumns;

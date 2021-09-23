@@ -1,11 +1,7 @@
-import React, { useEffect, useState } from "react";
-
 // Api
 import Api from "../../Api.json";
 
 const Properties = ({ linha, setLinha, coluna, setColuna }) => {
-  // Api.board.style.gridtemplatecolumns = 1
-  // Api.board.style.gridtemplaterows = 1
 
   function handleLinha(e) {
     if (e.target.value < 1) {
