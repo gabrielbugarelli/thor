@@ -25,13 +25,24 @@ const Board = () => {
 
   // ----COLUNAS -----
   useEffect(() => {
-    let colunaAux = []
-    const numeroColunas = Api.board.style.gridtemplatecolumns;
-    for (let i = 0; i < numeroColunas - 1; i++) {
-      colunaAux.push(i);
-    }
-    setColuna(colunaAux)
+    adcElemento();
   }, [Api.board.style.gridtemplatecolumns]);
+
+  function adcElemento() {
+    var divNova = document.createElement("div");
+    var conteudoNovo = document.createTextNode("nelcael");
+    divNova.style.borderLeft = "10px";
+    divNova.style.borderColor="black";
+    // divNova.style.maxWidth = "100%";
+    // divNova.style.alignItems = "center";
+    // divNova.style.justifyContent = "center";
+    // divNova.style.borderLeft = "1px";
+    // divNova.style.borderColor = "#ffff";
+
+    divNova.appendChild(conteudoNovo);
+    var list = document.getElementById("div1");
+    list.insertBefore(divNova, list.childNodes[0]);
+  }
 
   return (
     <div className="container-board">
@@ -43,10 +54,10 @@ const Board = () => {
       </div>
 
       {/* coluna  */}
-      <div className="context-coluna">
-        {coluna.map((item, key) => (
+      <div className="context-coluna" id="div1">
+        {/* {coluna.map((item, key) => (
           <Coluna className="colunas" key={key} />
-        ))}
+        ))} */}
       </div>
     </div>
   );
