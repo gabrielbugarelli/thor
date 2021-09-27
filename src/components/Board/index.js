@@ -12,6 +12,7 @@ import Api from "../../Api.json";
 const Board = () => {
   const [linhas, setLinhas] = useState([]);
   const [coluna, setColuna] = useState([]);
+  const [colunaAtual, setColunaAtual] = useState(0);
 
   // ----LINHAS -----
   useEffect(() => {
@@ -23,25 +24,34 @@ const Board = () => {
     setLinhas(linhasAux);
   }, [Api.board.style.gridtemplaterows]);
 
+  
   // ----COLUNAS -----
+  
   useEffect(() => {
-    adcElemento();
+
+    if (Api.board.style.gridtemplatecolumns > colunaAtual ) {
+      setColunaAtual(colunaAtual + 1)
+      if (Api.board.style.gridtemplatecolumns > 1) {
+        adicionarElement();
+      }
+      
+    } else if (Api.board.style.gridtemplatecolumns < colunaAtual) {
+      setColunaAtual(colunaAtual - 1)
+      removeElement();
+    }
   }, [Api.board.style.gridtemplatecolumns]);
 
-  function adcElemento() {
+  function adicionarElement() {
     var divNova = document.createElement("div");
-    var conteudoNovo = document.createTextNode("nelcael");
-    divNova.style.borderLeft = "10px";
-    divNova.style.borderColor="black";
-    // divNova.style.maxWidth = "100%";
-    // divNova.style.alignItems = "center";
-    // divNova.style.justifyContent = "center";
-    // divNova.style.borderLeft = "1px";
-    // divNova.style.borderColor = "#ffff";
-
+    var conteudoNovo = document.createTextNode("");
     divNova.appendChild(conteudoNovo);
     var list = document.getElementById("div1");
     list.insertBefore(divNova, list.childNodes[0]);
+  }
+
+  function removeElement() {
+    var list = document.getElementById("div1");
+    list.removeChild(list.firstChild)
   }
 
   return (
@@ -53,7 +63,8 @@ const Board = () => {
         ))}
       </div>
 
-      {/* coluna  */}
+      {/* COLUNA  */}
+
       <div className="context-coluna" id="div1">
         {/* {coluna.map((item, key) => (
           <Coluna className="colunas" key={key} />
